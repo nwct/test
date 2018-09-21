@@ -2,7 +2,7 @@ FROM alpine:3.4
 MAINTAINER chengang
  
 # Install root filesystem
-ADD ./rootfs /
+ADD ./ /
 # Install base packages
 RUN apk update && apk add curl bash tree tzdata \
     && cp -r -f /usr/share/zoneinfo/Hongkong /etc/localtime \
